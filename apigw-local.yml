@@ -72,6 +72,11 @@ spring:
           uri: lb://BUCKET-API
           predicates:
             - Path=/bucket/**
+          filters:
+            - name: JwtAuthentication
+              args: 
+                headerName: Authorization
+                granted: Bearer   
 
 
                 
