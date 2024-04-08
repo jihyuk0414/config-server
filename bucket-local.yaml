@@ -10,7 +10,7 @@ spring:
     username: root
     password : 1234
   application:
-    name: BUCKET-API
+    name: bucket
   jpa:
     hibernate:
       ddl-auto: update
