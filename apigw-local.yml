@@ -25,6 +25,24 @@ spring:
         - id: MEMBER-API
           uri: lb://MEMBER-API
           predicates:
+            - Path=/member/logout/**
+          filters:
+            - name: JwtAuthentication
+              args: 
+                headerName: Authorization
+                granted: Bearer
+        - id: MEMBER-API
+          uri: lb://MEMBER-API
+          predicates:
+            - Path=/member/payments/**
+          filters:
+            - name: JwtAuthentication
+              args: 
+                headerName: Authorization
+                granted: Bearer
+        - id: MEMBER-API
+          uri: lb://MEMBER-API
+          predicates:
             - Path=/member/**
         - id: MEMBER-API
           uri: lb://MEMBER-API
@@ -44,7 +62,14 @@ spring:
           uri: lb://PRODUCT-API
           predicates:
             - Path=/product/page
-        
+        - id: PRODUCT-API
+          uri: lb://PRODUCT-API
+          predicates:
+            - Path=/product/search/**
+        - id: PRODUCT-API
+          uri: lb://PRODUCT-API
+          predicates:
+            - Path=/product/mypage
         - id: PRODUCT-API
           uri: lb://PRODUCT-API
           predicates:
@@ -68,14 +93,5 @@ spring:
               args: 
                 headerName: Authorization
                 granted: Bearer
-                
-        - id: BUCKET-API
-          uri: lb://BUCKET-API
-          predicates:
-            - Path=/bucket/**
-          
-
-
-                
 jwt:
   secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK
