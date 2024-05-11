@@ -32,3 +32,23 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    transport:
+      protocol: smtp
+    debug: true
+    default:
+      encoding: UTF-8
+    mime:
+      charset: UTF-8
+    username: dealon2580@gmail.com  
+    password: asas1212!
