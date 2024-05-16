@@ -77,7 +77,7 @@ spring:
         - id: PRODUCT-API
           uri: lb://PRODUCT-API
           predicates:
-            - Path=/product/email
+            - Path=/product/emails
         
         - id: PRODUCT-API
           uri: lb://PRODUCT-API
