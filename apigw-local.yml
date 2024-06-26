@@ -87,7 +87,7 @@ spring:
             - Path=/follow/following/**
         
         - id: POST-API
-          uri: lb://PRODUCT-API
+          uri: lb://POST-API
           predicates:
             - Path=/post/page
         
