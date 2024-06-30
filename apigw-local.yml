@@ -116,6 +116,12 @@ spring:
               args: 
                 headerName: Authorization
                 granted: Bearer
+
+        - id: POST-API
+          uri: lb://POST-API
+          predicates:
+            - Path=/post/page_post/**
+        
         - id: POST-API
           uri: lb://POST-API
           predicates:
@@ -125,10 +131,7 @@ spring:
               args: 
                 headerName: Authorization
                 granted: Bearer
-        - id: POST-API
-          uri: lb://POST-API
-          predicates:
-            - Path=/post/page_post/**
+
 
 
             
