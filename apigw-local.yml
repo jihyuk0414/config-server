@@ -128,7 +128,7 @@ spring:
         - id: POST-API
           uri: lb://POST-API
           predicates:
-            - Path=/post/page_number/**
+            - Path=/post/page_post/**
 
 
             
