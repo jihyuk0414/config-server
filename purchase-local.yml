@@ -16,8 +16,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/payment?allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password: 1234
-  application:
+    password: asas1212!
+    application:
     name: purchase-api
 eureka:
   instance:
