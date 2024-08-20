@@ -26,4 +26,9 @@ spring:
     properties:
       hibernate:
         show_sql: true
-
+  mvc:
+    servlet:
+      encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
