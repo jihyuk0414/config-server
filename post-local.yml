@@ -20,12 +20,25 @@ spring:
     password : asas1212!
   application:
     name: post-api
+    
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         show_sql: true
+ mail:
+    host: smtp.naver.com
+    port: 465
+    username: 5-stars16
+    password: asas1212!
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtps.checkserveridentity: true
+      mail.smtps.ssl.trust: "*"
+      mail.debug: false
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
   mvc:
     servlet:
       encoding:
