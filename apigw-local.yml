@@ -95,6 +95,12 @@ spring:
           uri: lb://POST-API
           predicates:
             - Path=/post/page
+
+           
+        - id: POST-API
+          uri: lb://POST-API
+          predicates:
+            - Path=/post/mailtest
         
         - id: POST-API
           uri: lb://POST-API
