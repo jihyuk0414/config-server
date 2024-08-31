@@ -23,7 +23,8 @@ spring:
       #url: jdbc:mysql://localhost:3308/member?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
       #url: jdbc:mysql://223.130.134.4:3308/member?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
       username: root
-      password : 1234
+      password : asas1212!
+    
     
   application:
       name: member-api
