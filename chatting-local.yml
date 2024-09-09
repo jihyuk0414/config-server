@@ -1,0 +1,40 @@
+server:
+  port: 5080
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: chatting
+    producer:
+      bootstrap-servers: localhost:9092 
+  config:
+    activate:
+      on-profile: local
+  data:
+    mongodb:
+      uri: mongodb://jjh:1234@127.0.0.1:27017/chat?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.10
+    redis:
+      host: redis-service.db.svc.cluster.local
+      port: 6379
+  cache:
+    type: redis
+  application:
+    name: chat-api
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+jwt:
+  secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK
