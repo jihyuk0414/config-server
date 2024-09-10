@@ -16,6 +16,19 @@ spring:
         - id: CHAT-API
           uri: lb://CHAT-API
           predicates:
+            - Path=/chat/nick_name/**
+        - id: CHAT-API
+          uri: lb://CHAT-API
+          predicates:
+            - Path=/chat/**
+          filters:
+            - name: JwtAuthentication
+              args: 
+                headerName: Authorization
+                granted: Bearer
+        - id: CHAT-API
+          uri: lb://CHAT-API
+          predicates:
             - Path=/chatroom/**
           filters:
             - name: JwtAuthentication
